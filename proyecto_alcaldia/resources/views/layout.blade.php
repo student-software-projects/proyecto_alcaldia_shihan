@@ -23,10 +23,13 @@
 </head>
 <body>
     <header>
-        <nav class="uk-navbar-container uk-margin" uk-navbar>
+        <nav class="uk-navbar-container uk-margin uk-overflow-auto" style="min-width:600px" uk-navbar>
+            <div class="uk-navbar-left">
+                <a class="uk-navbar-item uk-logo" style="font-family:'Piazzolla'" href="{{url('/')}}">Inicio</a>
+            </div>
             <div class="uk-navbar-center">
                 <ul class="uk-navbar-nav">
-                    <li><a href="" style="font-family:'Piazzolla'"><span class="uk-margin-small-right" uk-icon="icon: location"></span> Localidades</a></li>
+                    <li><a href="{{url('localidades')}}" style="font-family:'Piazzolla'"><span class="uk-margin-small-right" uk-icon="icon: location"></span> Localidades</a></li>
                     <li><a href="" style="font-family:'Piazzolla'"><span class="uk-margin-small-right" uk-icon="icon: nut"></span> Equipos</a></li>
                     <li><a href="" style="font-family:'Piazzolla'"><span class="uk-margin-small-right" uk-icon="icon: album"></span> Jugadores</a></li>
                 </ul>
@@ -34,11 +37,8 @@
         </nav>        
     </header>
 
-    <main class="uk-container uk-box-shadow-xlarge uk-overflow-auto" style="margin-top:50px">
+    <main class="uk-container uk-box-shadow-xlarge uk-overflow-auto uk-padding" style="margin-top:50px">
         @yield('contenido')
-        Hola Mundo
-        <p>Hola mundo</p>
-        <p>Hola mundo</p>
     </main>
 
     <footer style="text-align: center; margin-top: 20px">

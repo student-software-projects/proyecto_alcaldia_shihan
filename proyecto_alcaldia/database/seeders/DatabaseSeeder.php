@@ -17,5 +17,15 @@ class DatabaseSeeder extends Seeder
         DB::table('localidades')->insert([
             'localidad' => 'Usaquen',
         ]);
+        
+        DB::table('localidades')->insert([
+            'localidad' => 'Chapinero',
+        ]);
+        
+        DB::table('localidades')->insert([
+            'localidad' => 'Santa Fe',
+        ]);
+
+
     }
 }

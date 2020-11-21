@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LocalidadController;
+use App\Http\Controllers\EquipoController;
+use App\Http\Controllers\JugadorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('layout');
-});
+
+Route::view('/', 'home.index');
+
+Route::get('localidades', [LocalidadController::class, 'index'])->name('localidad.index');
+Route::get('localidades/crear',[LocalidadController::class,'crear'])->name('localidad.crear');
+Route::post('localidades', [LocalidadController::class, 'guardar'])->name('localidad.guardar');
+
+Route::delete('localidades/{id}', [LocalidadController::class, 'eliminar'])->name('localidad.eliminar');
+Route::get('localidades/editar/{id}', [LocalidadController::class, 'editar'])->name('localidad.editar');
+Route::put('localidades/{id}', [LocalidadController::class, 'actualizar'])->name('localidad.actualizar');
