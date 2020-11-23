@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+
     <link rel="stylesheet" href="{{asset('contenido/uikit/uikit.min.css')}}">
     <script src="{{asset('plugins/uikit/uikit.min.js')}}"></script>
     <script src="{{asset('plugins/uikit/uikit-icons.min.js')}}"></script>
@@ -30,11 +30,11 @@
             <div class="uk-navbar-center">
                 <ul class="uk-navbar-nav">
                     <li><a href="{{url('localidades')}}" style="font-family:'Piazzolla'"><span class="uk-margin-small-right" uk-icon="icon: location"></span> Localidades</a></li>
-                    <li><a href="" style="font-family:'Piazzolla'"><span class="uk-margin-small-right" uk-icon="icon: nut"></span> Equipos</a></li>
-                    <li><a href="" style="font-family:'Piazzolla'"><span class="uk-margin-small-right" uk-icon="icon: album"></span> Jugadores</a></li>
+                    <li><a href="{{url('equipos')}}" style="font-family:'Piazzolla'"><span class="uk-margin-small-right" uk-icon="icon: nut"></span> Equipos</a></li>
+                    <li><a href="{{url('jugadores')}}" style="font-family:'Piazzolla'"><span class="uk-margin-small-right" uk-icon="icon: album"></span> Jugadores</a></li>
                 </ul>
             </div>
-        </nav>        
+        </nav>
     </header>
 
     <main class="uk-container uk-box-shadow-xlarge uk-overflow-auto uk-padding" style="margin-top:50px">
