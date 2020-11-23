@@ -16,8 +16,8 @@ class LocalidadController extends Controller
         return view('localidades.crear');
     }
 
-    public function guardar($id){
-        $localidad = Localidad::find($id);
+    public function guardar(Request $request){
+        $localidad = Localidad::create($request->all());
         return redirect()->route('localidad.index');
     }  
     
