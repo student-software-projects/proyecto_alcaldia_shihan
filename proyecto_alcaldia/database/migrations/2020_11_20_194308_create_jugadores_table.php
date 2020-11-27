@@ -21,6 +21,7 @@ class CreateJugadoresTable extends Migration
             $table->string('apodo', 45);
             $table->unsignedBigInteger('equipo_id');
             $table->foreign('equipo_id')->references('id')->on('equipos');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

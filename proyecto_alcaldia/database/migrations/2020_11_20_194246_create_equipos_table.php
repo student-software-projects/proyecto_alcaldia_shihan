@@ -19,6 +19,7 @@ class CreateEquiposTable extends Migration
             $table->text('logo');
             $table->unsignedBigInteger('localidad_id');
             $table->foreign('localidad_id')->references('id')->on('localidades');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
